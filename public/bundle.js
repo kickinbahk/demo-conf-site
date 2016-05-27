@@ -53,16 +53,20 @@
 
 	var Route = _require.Route;
 	var Router = _require.Router;
-	var IndexRouter = _require.IndexRouter;
+	var IndexRoute = _require.IndexRoute;
 	var hashHistory = _require.hashHistory;
 
 	var Main = __webpack_require__(220);
-	var bootstrap = __webpack_require__(222);
+	var Home = __webpack_require__(490);
 
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { history: hashHistory },
-	  React.createElement(Route, { path: '/', component: Main })
+	  React.createElement(
+	    Route,
+	    { path: '/', component: Main },
+	    React.createElement(IndexRoute, { component: Home })
+	  )
 	), document.getElementById('app'));
 
 /***/ },
@@ -25197,7 +25201,8 @@
 	  return React.createElement(
 	    'div',
 	    null,
-	    React.createElement(Nav, null)
+	    React.createElement(Nav, null),
+	    props.children
 	  );
 	};
 
@@ -25213,44 +25218,55 @@
 
 	var _require = __webpack_require__(222);
 
-	var Button = _require.Button;
 	var Nav = _require.Nav;
-
-	var ReactRouter = __webpack_require__(159);
+	var NavItem = _require.NavItem;
 
 	var _require2 = __webpack_require__(487);
 
 	var IndexLinkContainer = _require2.IndexLinkContainer;
+	var LinkContainer = _require2.LinkContainer;
 
 
-	var Nav = React.createClass({
-	  displayName: 'Nav',
+	var NavBar = React.createClass({
+	  displayName: 'NavBar',
 
 	  render: function render() {
 	    return React.createElement(
 	      Nav,
-	      { bsStyle: 'pills', activeKey: 1 },
+	      { className: 'nav pull-right', navbar: true },
 	      React.createElement(
 	        IndexLinkContainer,
-	        { eventKey: 1, href: '/home' },
-	        'NavItem 1 content'
+	        { to: { pathname: '/' } },
+	        React.createElement(
+	          NavItem,
+	          null,
+	          'Home'
+	        )
 	      ),
 	      React.createElement(
-	        IndexLinkContainer,
-	        { eventKey: 2, title: 'Item' },
-	        'NavItem 2 content'
+	        LinkContainer,
+	        { to: { pathname: '#' } },
+	        React.createElement(
+	          NavItem,
+	          { title: 'Item' },
+	          'About'
+	        )
 	      ),
 	      React.createElement(
-	        IndexLinkContainer,
-	        { eventKey: 3, disabled: true },
-	        'NavItem 3 content'
+	        LinkContainer,
+	        { to: { pathname: '#' } },
+	        React.createElement(
+	          NavItem,
+	          { title: 'Item' },
+	          'Examples'
+	        )
 	      )
 	    );
 	  }
 
 	});
 
-	module.exports = Nav;
+	module.exports = NavBar;
 
 /***/ },
 /* 222 */
@@ -44659,6 +44675,45 @@
 
 	exports.default = LinkContainer;
 	module.exports = exports['default'];
+
+/***/ },
+/* 490 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(222);
+
+	var Nav = _require.Nav;
+	var NavItem = _require.NavItem;
+	var container = _require.container;
+
+
+	var Home = React.createClass({
+	  displayName: 'Home',
+
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'container',
+	        null,
+	        React.createElement(
+	          'h2',
+	          null,
+	          'The Home Page'
+	        )
+	      )
+	    );
+	  }
+
+	});
+
+	module.exports = Home;
 
 /***/ }
 /******/ ]);

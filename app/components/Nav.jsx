@@ -9,10 +9,10 @@ var NavBar = React.createClass({
         <IndexLinkContainer to={{ pathname: '/' }}>
           <NavItem>Home</NavItem>
         </IndexLinkContainer>
-        <LinkContainer to={{ pathname: '#' }}>
+        <LinkContainer to={{ pathname: '/about' }}>
           <NavItem title='Item'>About</NavItem>
         </LinkContainer>
-        <LinkContainer to={{ pathname: '#' }}>
+        <LinkContainer to={{ pathname: '/example' }}>
           <NavItem title='Item'>Examples</NavItem>
         </LinkContainer>
       </Nav>

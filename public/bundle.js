@@ -58,6 +58,8 @@
 
 	var Main = __webpack_require__(220);
 	var Home = __webpack_require__(490);
+	var About = __webpack_require__(491);
+	var Example = __webpack_require__(492);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -65,7 +67,9 @@
 	  React.createElement(
 	    Route,
 	    { path: '/', component: Main },
-	    React.createElement(IndexRoute, { component: Home })
+	    React.createElement(IndexRoute, { component: Home }),
+	    React.createElement(Route, { path: 'about', component: About }),
+	    React.createElement(Route, { path: 'example', component: Example })
 	  )
 	), document.getElementById('app'));
 
@@ -25245,7 +25249,7 @@
 	      ),
 	      React.createElement(
 	        LinkContainer,
-	        { to: { pathname: '#' } },
+	        { to: { pathname: '/about' } },
 	        React.createElement(
 	          NavItem,
 	          { title: 'Item' },
@@ -25254,7 +25258,7 @@
 	      ),
 	      React.createElement(
 	        LinkContainer,
-	        { to: { pathname: '#' } },
+	        { to: { pathname: '/example' } },
 	        React.createElement(
 	          NavItem,
 	          { title: 'Item' },
@@ -44686,25 +44690,22 @@
 
 	var _require = __webpack_require__(222);
 
-	var Nav = _require.Nav;
-	var NavItem = _require.NavItem;
-	var container = _require.container;
+	var Col = _require.Col;
 
 
 	var Home = React.createClass({
 	  displayName: 'Home',
-
 
 	  render: function render() {
 	    return React.createElement(
 	      'div',
 	      null,
 	      React.createElement(
-	        'container',
-	        null,
+	        Col,
+	        { md: 6, mdOffset: 3 },
 	        React.createElement(
 	          'h2',
-	          null,
+	          { className: 'text-center' },
 	          'The Home Page'
 	        )
 	      )
@@ -44714,6 +44715,70 @@
 	});
 
 	module.exports = Home;
+
+/***/ },
+/* 491 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(222);
+
+	var Col = _require.Col;
+
+
+	var About = React.createClass({
+	  displayName: 'About',
+
+	  render: function render() {
+	    return React.createElement(
+	      Col,
+	      { md: 6, mdOffset: 3 },
+	      React.createElement(
+	        'h2',
+	        { className: 'text-center' },
+	        'About'
+	      )
+	    );
+	  }
+
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 492 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(222);
+
+	var Col = _require.Col;
+
+
+	var Example = React.createClass({
+	  displayName: 'Example',
+
+	  render: function render() {
+	    return React.createElement(
+	      Col,
+	      { md: 6, mdOffset: 3 },
+	      React.createElement(
+	        'h2',
+	        { className: 'text-center' },
+	        'Examples'
+	      )
+	    );
+	  }
+
+	});
+
+	module.exports = Example;
 
 /***/ }
 /******/ ]);

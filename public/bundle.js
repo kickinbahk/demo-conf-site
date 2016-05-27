@@ -25236,33 +25236,37 @@
 
 	  render: function render() {
 	    return React.createElement(
-	      Nav,
-	      { className: 'nav pull-right', navbar: true },
+	      'div',
+	      { className: 'header' },
 	      React.createElement(
-	        IndexLinkContainer,
-	        { to: { pathname: '/' } },
+	        Nav,
+	        { className: 'nav pull-right', navbar: true },
 	        React.createElement(
-	          NavItem,
-	          null,
-	          'Home'
-	        )
-	      ),
-	      React.createElement(
-	        LinkContainer,
-	        { to: { pathname: '/about' } },
+	          IndexLinkContainer,
+	          { to: { pathname: '/' } },
+	          React.createElement(
+	            NavItem,
+	            null,
+	            'Home'
+	          )
+	        ),
 	        React.createElement(
-	          NavItem,
-	          { title: 'Item' },
-	          'About'
-	        )
-	      ),
-	      React.createElement(
-	        LinkContainer,
-	        { to: { pathname: '/example' } },
+	          LinkContainer,
+	          { to: { pathname: '/about' } },
+	          React.createElement(
+	            NavItem,
+	            { title: 'Item' },
+	            'About'
+	          )
+	        ),
 	        React.createElement(
-	          NavItem,
-	          { title: 'Item' },
-	          'Examples'
+	          LinkContainer,
+	          { to: { pathname: '/example' } },
+	          React.createElement(
+	            NavItem,
+	            { title: 'Item' },
+	            'Examples'
+	          )
 	        )
 	      )
 	    );

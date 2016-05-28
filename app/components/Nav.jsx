@@ -6,7 +6,8 @@ var NavBar = React.createClass({
   render: function () {
     return (
       <div className='header'>
-        <Nav className='nav pull-right' navbar>
+        <h2 className='pull-left'>Amazing Conference!</h2>
+        <Nav className='nav pull-right' navbar bsStyle='pills'>
           <IndexLinkContainer to={{ pathname: '/' }}>
             <NavItem>Home</NavItem>
           </IndexLinkContainer>

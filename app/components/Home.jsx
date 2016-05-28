@@ -1,14 +1,11 @@
 var React = require('react')
 var {Col} = require('react-bootstrap')
+var HeroImage = require('HeroImage')
 
 var Home = React.createClass({
   render: function () {
     return (
-      <div>
-        <Col md={6} mdOffset={3}>
-          <h2 className='text-center'>The Home Page</h2>
-        </Col>
-      </div>
+      <HeroImage />
     )
   }
 

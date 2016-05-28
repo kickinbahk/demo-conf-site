@@ -25239,8 +25239,13 @@
 	      'div',
 	      { className: 'header' },
 	      React.createElement(
+	        'h2',
+	        { className: 'pull-left' },
+	        'Amazing Conference!'
+	      ),
+	      React.createElement(
 	        Nav,
-	        { className: 'nav pull-right', navbar: true },
+	        { className: 'nav pull-right', navbar: true, bsStyle: 'pills' },
 	        React.createElement(
 	          IndexLinkContainer,
 	          { to: { pathname: '/' } },
@@ -44696,24 +44701,13 @@
 
 	var Col = _require.Col;
 
+	var HeroImage = __webpack_require__(493);
 
 	var Home = React.createClass({
 	  displayName: 'Home',
 
 	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        Col,
-	        { md: 6, mdOffset: 3 },
-	        React.createElement(
-	          'h2',
-	          { className: 'text-center' },
-	          'The Home Page'
-	        )
-	      )
-	    );
+	    return React.createElement(HeroImage, null);
 	  }
 
 	});
@@ -44783,6 +44777,31 @@
 	});
 
 	module.exports = Example;
+
+/***/ },
+/* 493 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(222);
+
+	var Image = _require.Image;
+
+
+	var HeroImage = React.createClass({
+	  displayName: 'HeroImage',
+
+
+	  render: function render() {
+	    return React.createElement(Image, { src: '/./assets/images/new-york.jpeg', responsive: true, className: 'heroImage' });
+	  }
+
+	});
+
+	module.exports = HeroImage;
 
 /***/ }
 /******/ ]);

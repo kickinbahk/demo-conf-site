@@ -10,6 +10,7 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
       Home: 'app/components/Home.jsx',
+      HeroImage: 'app/components/HeroImage.jsx',
       About: 'app/components/About.jsx',
       Example: 'app/components/Example.jsx'
     },

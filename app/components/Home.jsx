@@ -7,7 +7,7 @@ var Home = React.createClass({
     return (
       <div>
         <HeroImage />
-        <Col md={6} mdOffset={4}>
+        <Col md={6} mdOffset={3}>
           <h1 className='text-center'>Discover New Tips in Tips.NYC</h1>
           <p className='text-center'>The event like no other event.</p>
         </Col>

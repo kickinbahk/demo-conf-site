@@ -44713,7 +44713,7 @@
 	      React.createElement(HeroImage, null),
 	      React.createElement(
 	        Col,
-	        { md: 6, mdOffset: 4 },
+	        { md: 6, mdOffset: 3 },
 	        React.createElement(
 	          'h1',
 	          { className: 'text-center' },

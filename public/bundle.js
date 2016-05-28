@@ -44707,7 +44707,25 @@
 	  displayName: 'Home',
 
 	  render: function render() {
-	    return React.createElement(HeroImage, null);
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(HeroImage, null),
+	      React.createElement(
+	        Col,
+	        { md: 6, mdOffset: 4 },
+	        React.createElement(
+	          'h1',
+	          { className: 'text-center' },
+	          'Discover New Tips in Tips.NYC'
+	        ),
+	        React.createElement(
+	          'p',
+	          { className: 'text-center' },
+	          'The event like no other event.'
+	        )
+	      )
+	    );
 	  }
 
 	});
@@ -44796,7 +44814,8 @@
 
 
 	  render: function render() {
-	    return React.createElement(Image, { src: '/./assets/images/new-york.jpeg', responsive: true, className: 'heroImage' });
+	    return React.createElement(Image, { src: '/./assets/images/new-york.jpeg',
+	      responsive: true, className: 'heroImage', alt: 'Cover image of NYC Skyline' });
 	  }
 
 	});

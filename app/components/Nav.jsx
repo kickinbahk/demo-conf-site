@@ -5,7 +5,7 @@ var NavBar = React.createClass({
   render: function () {
     return (
       <nav className='nav navbar navbar-default'>
-        <div className='container'>
+        <div className='container-fluid'>
           <h2 className='pull-left'>Amazing Conference!</h2>
           <ul className='nav nav-pills pull-right'>
             <li role='presentation'>

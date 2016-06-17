@@ -27797,7 +27797,7 @@
 	      { className: 'nav navbar navbar-default' },
 	      React.createElement(
 	        'div',
-	        { className: 'container' },
+	        { className: 'container-fluid' },
 	        React.createElement(
 	          'h2',
 	          { className: 'pull-left' },

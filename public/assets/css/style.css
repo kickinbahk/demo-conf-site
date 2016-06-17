@@ -6,7 +6,11 @@
 .header h2 {
   margin: 10px 0 0 0;
 }
+.nav.navbar {
+  margin-bottom: 0px;
+}
 .heroImage {
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }

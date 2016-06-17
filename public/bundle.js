@@ -2607,7 +2607,7 @@
 	    { path: '/', component: Main },
 	    React.createElement(IndexRoute, { component: Home }),
 	    React.createElement(Route, { path: 'about', component: About }),
-	    React.createElement(Route, { path: 'example', component: Example })
+	    React.createElement(Route, { path: 'examples', component: Example })
 	  )
 	), document.getElementById('app'));
 
@@ -27793,30 +27793,42 @@
 
 	  render: function render() {
 	    return React.createElement(
-	      'div',
-	      { className: 'header' },
+	      'nav',
+	      { className: 'nav navbar navbar-default' },
 	      React.createElement(
 	        'h2',
 	        { className: 'pull-left' },
 	        'Amazing Conference!'
 	      ),
 	      React.createElement(
-	        'nav',
-	        { className: 'nav pull-right', navbar: true, bsStyle: 'pills' },
+	        'ul',
+	        { className: 'nav nav-pills pull-right' },
 	        React.createElement(
-	          IndexLink,
-	          { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	          'Home'
+	          'li',
+	          { role: 'presentation' },
+	          React.createElement(
+	            IndexLink,
+	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	            'Home'
+	          )
 	        ),
 	        React.createElement(
-	          IndexLink,
-	          { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	          'About'
+	          'li',
+	          { role: 'presentation' },
+	          React.createElement(
+	            IndexLink,
+	            { to: '/about', activeClassName: 'active', className: 'presentation', activeStyle: { fontWeight: 'bold' } },
+	            'About'
+	          )
 	        ),
 	        React.createElement(
-	          IndexLink,
-	          { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	          'Examples'
+	          'li',
+	          { role: 'presentation' },
+	          React.createElement(
+	            IndexLink,
+	            { to: '/examples', activeClassName: 'active', className: 'presentation', activeStyle: { fontWeight: 'bold' } },
+	            'Examples'
+	          )
 	        )
 	      )
 	    );
@@ -27845,7 +27857,7 @@
 	      React.createElement(HeroImage, null),
 	      React.createElement(
 	        'div',
-	        { 'class': 'col-md-6 col-md-offset-2' },
+	        { className: 'col-md-6 col-md-offset-2' },
 	        React.createElement(
 	          'h1',
 	          { className: 'text-center' },
@@ -27875,10 +27887,9 @@
 	var HeroImage = React.createClass({
 	  displayName: 'HeroImage',
 
-
 	  render: function render() {
 	    return React.createElement('img', { src: '/./assets/images/new-york.jpeg',
-	      'class': 'heroImage responsive', alt: 'Cover image of NYC Skyline' });
+	      className: 'heroImage responsive', alt: 'Cover image of NYC Skyline' });
 	  }
 
 	});
@@ -27899,7 +27910,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      { 'class': 'col-md-6 col-md-offset-2' },
+	      { className: 'col-md-6 col-md-offset-2' },
 	      React.createElement(
 	        'h2',
 	        { className: 'text-center' },
@@ -27926,7 +27937,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      { 'class': 'col-md-6 col-md-offset-2' },
+	      { className: 'col-md-6 col-md-offset-2' },
 	      React.createElement(
 	        'h2',
 	        { className: 'text-center' },

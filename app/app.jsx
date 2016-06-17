@@ -6,6 +6,10 @@ var Home = require('Home')
 var About = require('About')
 var Example = require('Example')
 
+// load bootstrap
+require('bootstrap-loader')
+
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path='/' component={Main}>

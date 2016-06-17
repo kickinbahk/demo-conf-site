@@ -1,23 +1,22 @@
 var React = require('react')
-var {Nav, NavItem} = require('react-bootstrap')
-var {IndexLinkContainer, LinkContainer} = require('react-router-bootstrap')
+var {IndexLink} = require('react-router')
 
 var NavBar = React.createClass({
   render: function () {
     return (
       <div className='header'>
         <h2 className='pull-left'>Amazing Conference!</h2>
-        <Nav className='nav pull-right' navbar bsStyle='pills'>
-          <IndexLinkContainer to={{ pathname: '/' }}>
-            <NavItem>Home</NavItem>
-          </IndexLinkContainer>
-          <LinkContainer to={{ pathname: '/about' }}>
-            <NavItem title='Item'>About</NavItem>
-          </LinkContainer>
-          <LinkContainer to={{ pathname: '/example' }}>
-            <NavItem title='Item'>Examples</NavItem>
-          </LinkContainer>
-        </Nav>
+        <nav className='nav pull-right' navbar bsStyle='pills'>
+          <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>
+            Home
+          </IndexLink>
+          <IndexLink to='/about' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>
+            About
+          </IndexLink>
+          <IndexLink to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>
+            Examples
+          </IndexLink>
+        </nav>
       </div>
     )
   }

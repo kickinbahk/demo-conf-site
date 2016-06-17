@@ -27796,38 +27796,42 @@
 	      'nav',
 	      { className: 'nav navbar navbar-default' },
 	      React.createElement(
-	        'h2',
-	        { className: 'pull-left' },
-	        'Amazing Conference!'
-	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'nav nav-pills pull-right' },
+	        'div',
+	        { className: 'container' },
 	        React.createElement(
-	          'li',
-	          { role: 'presentation' },
-	          React.createElement(
-	            IndexLink,
-	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            'Home'
-	          )
+	          'h2',
+	          { className: 'pull-left' },
+	          'Amazing Conference!'
 	        ),
 	        React.createElement(
-	          'li',
-	          { role: 'presentation' },
+	          'ul',
+	          { className: 'nav nav-pills pull-right' },
 	          React.createElement(
-	            IndexLink,
-	            { to: '/about', activeClassName: 'active', className: 'presentation', activeStyle: { fontWeight: 'bold' } },
-	            'About'
-	          )
-	        ),
-	        React.createElement(
-	          'li',
-	          { role: 'presentation' },
+	            'li',
+	            { role: 'presentation' },
+	            React.createElement(
+	              IndexLink,
+	              { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	              'Home'
+	            )
+	          ),
 	          React.createElement(
-	            IndexLink,
-	            { to: '/examples', activeClassName: 'active', className: 'presentation', activeStyle: { fontWeight: 'bold' } },
-	            'Examples'
+	            'li',
+	            { role: 'presentation' },
+	            React.createElement(
+	              IndexLink,
+	              { to: '/about', activeClassName: 'active', className: 'presentation', activeStyle: { fontWeight: 'bold' } },
+	              'About'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            { role: 'presentation' },
+	            React.createElement(
+	              IndexLink,
+	              { to: '/examples', activeClassName: 'active', className: 'presentation', activeStyle: { fontWeight: 'bold' } },
+	              'Examples'
+	            )
 	          )
 	        )
 	      )

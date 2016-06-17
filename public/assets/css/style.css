@@ -9,6 +9,14 @@
 .nav.navbar {
   margin-bottom: 0px;
 }
+.nav-pills li a {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.nav li a:hover, .nav li a:focus {
+
+}
 .heroImage {
   width: 100%;
   background-size: cover;
